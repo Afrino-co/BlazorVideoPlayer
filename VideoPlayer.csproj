@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<PackageIcon>logo.png</PackageIcon>
+		<TargetFramework>net5.0</TargetFramework>
+		<Authors>Meysam Masoud</Authors>
+		<Copyright>© Moghaddam. All rights reserved.</Copyright>
+		<Description>A suitable video player for Blazor WebAssembly. plyr.io</Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageTags>BlazorWebAssembly Blazor BlazorVideoPlayer plyr.io net5.0</PackageTags>
+		<PackageReleaseNotes>change Icon</PackageReleaseNotes>
+		<PackageId>BlazorVideoPlayer</PackageId>
+		<Version>1.0.3</Version>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="logo.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="logo.png">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="logo.png" Pack="true" PackagePath="logo.png" />
+	</ItemGroup>
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
+	</ItemGroup>
+</Project>
