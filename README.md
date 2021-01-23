@@ -9,11 +9,17 @@ Install-Package BlazorVideoPlayer -Version x.x
 x.x is version of package for use last version see https://www.nuget.org/packages/BlazorVideoPlayer
 
 # How to use
-add css and js file in client_side _Host.cshml or index.html
+add css and js files in client_side _Host.cshml or index.html
 ```
 <link rel="stylesheet" href="_content/VideoPlayer/Plyr.css">
+```
+Between head tag
+
+
+```
 <script src="_content/VideoPlayer/plyr.js"></script>
 ```
+Befor closed body tag
 
 then use 
 ```
