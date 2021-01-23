@@ -10,18 +10,18 @@ x.x is version of package for use last version see https://www.nuget.org/package
 
 # How to use
 add css and js files in client_side _Host.cshml or index.html
+
+Between head tag:
 ```
 <link rel="stylesheet" href="_content/VideoPlayer/Plyr.css">
 ```
-Between head tag
 
-
+Befor closed body tag:
 ```
 <script src="_content/VideoPlayer/plyr.js"></script>
 ```
-Befor closed body tag
 
-then use 
+then use:
 ```
 <VideoPlayer.VideoPlayer DownloadLink="" Sources="" Poster=""/>
 ```
