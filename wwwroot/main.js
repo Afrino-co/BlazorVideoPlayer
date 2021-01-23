@@ -1,5 +1,6 @@
 ﻿
 export function load(settings, controls) {
+
     var settingsArray = settings.split(",");
     var controlsArray = controls.split(",");
     const players = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p, {
