@@ -13,12 +13,12 @@ add css and js files in client_side _Host.cshml or index.html
 
 Between head tag:
 ```
-<link rel="stylesheet" href="_content/VideoPlayer/Plyr.css">
+<link rel="stylesheet" href="_content/BlazorVideoPlayer/Plyr.css">
 ```
 
 Befor closed body tag:
 ```
-<script src="_content/VideoPlayer/plyr.js"></script>
+<script src="_content/BlazorVideoPlayer/plyr.js"></script>
 ```
 
 then use:
