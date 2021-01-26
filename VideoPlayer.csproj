@@ -30,11 +30,11 @@
 	<ItemGroup>
 		<None Include="logo.png" Pack="true" PackagePath="logo.png" />
 	</ItemGroup>
-	<ItemGroup>
-		<SupportedPlatform Include="browser" />
-	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
 	</ItemGroup>
 </Project>
