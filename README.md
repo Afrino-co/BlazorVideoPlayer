@@ -23,9 +23,15 @@ Befor closed body tag:
 
 then use:
 ```
-<VideoPlayer.VideoPlayer DownloadLink="" Sources="" Poster=""/>
+<VideoPlayer.VideoPlayer id="elementId" settings="captions,quality,speed,loop" controls="play-large,restart,rewind,play,fast-forward,progress,current-time,duration,mute,volume,captions,settings,pip,airplay,download,fullscreen" DownloadLink="" Sources="" Poster=""/>
 ```
-in your Components
+in your Components.(Defining an id attribute is mandatory)
+
+### settings
+Included: captions,quality,speed,loop
+
+### controls
+Included: play-large,restart,rewind,play,fast-forward,progress,current-time,duration,mute,volume,captions,settings,pip,airplay,download,fullscreen
 
 ### DownloadLink
 your video download link

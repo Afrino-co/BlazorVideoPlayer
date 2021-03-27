@@ -8,9 +8,9 @@
 		<Description>A suitable video player for Blazor WebAssembly. plyr.io</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageTags>BlazorWebAssembly Blazor BlazorVideoPlayer plyr.io net5.0</PackageTags>
-		<PackageReleaseNotes>change Icon</PackageReleaseNotes>
+		<PackageReleaseNotes>Remove console logs</PackageReleaseNotes>
 		<PackageId>BlazorVideoPlayer</PackageId>
-		<Version>1.0.4</Version>
+		<Version>1.0.9</Version>
 		<RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</PackageProjectUrl>
 
@@ -32,7 +32,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.4" />
 	</ItemGroup>
 	<ItemGroup>
 		<SupportedPlatform Include="browser" />
