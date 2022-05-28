@@ -1,6 +1,9 @@
 # BlazorVideoPlayer
 A suitable and customisable video player for Blazor WebAssembly.Based on plyr.io, With capabilities such as Fullscreen, Shortcuts, Picture-in-Picture, Playsinline,Speed controls,Multiple captions,Responsive and ...
 
+[![Image of Plyr](https://user-images.githubusercontent.com/65253484/115996747-d4299e80-a5f5-11eb-97c6-23e268a31b0d.png)](https://www.nuget.org/packages/BlazorVideoPlayer)
+
+
 # Install
 Install this package in client_side project packages with:
 ```
