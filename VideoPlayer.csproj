@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<PackageIcon>logo.png</PackageIcon>
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 		<Authors>Meysam Masoud</Authors>
 		<Copyright>© Moghaddam. All rights reserved.</Copyright>
 		<Description>A suitable video player for Blazor WebAssembly. plyr.io</Description>
@@ -10,7 +10,7 @@
 		<PackageTags>BlazorWebAssembly Blazor BlazorVideoPlayer plyr.io net5.0</PackageTags>
 		<PackageReleaseNotes>Add OnEnded Event</PackageReleaseNotes>
 		<PackageId>BlazorVideoPlayer</PackageId>
-		<Version>1.1.3</Version>
+		<Version>2.0.0</Version>
 		<RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</PackageProjectUrl>
 
@@ -32,7 +32,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.4" />
+	  <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.5" />
 	</ItemGroup>
 	<ItemGroup>
 		<SupportedPlatform Include="browser" />
