@@ -29,6 +29,8 @@ then use:
 <VideoPlayer.VideoPlayer id="elementId" settings="captions,quality,speed,loop" controls="play-large,restart,rewind,play,fast-forward,progress,current-time,duration,mute,volume,captions,settings,pip,airplay,download,fullscreen" DownloadLink="" Sources="" Poster=""/>
 ```
 in your Components.(Defining an id attribute is mandatory)
+### html attributes
+Included: crossorigin,playsinline and all video tag attributes
 
 ### settings
 Included: captions,quality,speed,loop
