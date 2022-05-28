@@ -3,48 +3,37 @@
 @if (Sources != null)
 {
 
-    <video controls
-           crossorigin
-           playsinline
-           data-poster="@Poster"
-           @attributes="InputAttributes">
+<video controls
+       data-poster="@Poster"
+       @attributes="InputAttributes">
 
-        <!-- Video files -->
-        @if (Sources.Any())
+    <!-- Video files -->
+    @if (Sources.Any())
+    {
+        foreach (var item in Sources)
         {
-            foreach (var item in Sources)
-            {
-                //Console.WriteLine(item.Key + ":" + item.Value);
-                //type = GetVideoType(item.Value);
+            //Console.WriteLine(item.Key + ":" + item.Value);
+            //type = GetVideoType(item.Value);
 
-                <source src="@item.Value"
-                        type="video/mp4"
-                        size="@item.Key" />
-            }
-
-        }
-        else
-        {
-            <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+            <source src="@item.Value"
                     type="video/mp4"
-                    size="576" />
+                    size="@item.Key" />
         }
 
-        <!-- Caption files -->
-        @if (Captions != null)
+    }
+    @*else
+    {
+        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                type="video/mp4"
+                size="576" />
+    }*@
+
+    <!-- Caption files -->
+    @if (Captions != null)
+    {
+        if (Captions.Any())
         {
-            if (Captions.Any())
-            {
-                foreach (var item in Captions)
-                {
-                    <track kind="captions"
-                           label="English"
-                           srclang="en"
-                           src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                           default />
-                }
-            }
-            else
+            foreach (var item in Captions)
             {
                 <track kind="captions"
                        label="English"
@@ -53,14 +42,25 @@
                        default />
             }
         }
+        @*else
+        {
+            <track kind="captions"
+                   label="English"
+                   srclang="en"
+                   src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                   default />
+        }*@
+    }
 
 
 
-
-
-        <!-- Fallback for browsers that don't support the <video> element -->
+    <!-- Fallback for browsers that don't support the <video> element -->
+    @if (!string.IsNullOrEmpty(DownloadLink))
+    {
         <a href="@DownloadLink" download>دانلود</a>
-    </video>
+    }
+
+</video>
 }
 
 @code {
@@ -69,13 +69,13 @@
 
 
     [Parameter]
-    public string Poster { get; set; } = "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg";
+    public string Poster { get; set; }
 
     [Parameter]
     public Dictionary<string, string> Sources { get; set; }
 
     [Parameter]
-    public string DownloadLink { get; set; } = "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4";
+    public string DownloadLink { get; set; }
 
     [Parameter]
     public Dictionary<string, string> Captions { get; set; }
