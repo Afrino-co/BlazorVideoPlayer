@@ -4,47 +4,80 @@ A suitable and customisable video player for Blazor WebAssembly.Based on plyr.io
 [![Image of Plyr](https://user-images.githubusercontent.com/65253484/115996747-d4299e80-a5f5-11eb-97c6-23e268a31b0d.png)](https://www.nuget.org/packages/BlazorVideoPlayer)
 
 
-# Install
-Install this package in client_side project packages with:
+# Install the package
+Find the package through NuGet Package Manager or install it with following command.
 ```
 Install-Package BlazorVideoPlayer -Version x.x
+```
+```
+dotnet add package BlazorVideoPlayer
 ``` 
 x.x is version of package for use last version see https://www.nuget.org/packages/BlazorVideoPlayer
 
-# How to use
-add css and js files in client_side _Host.cshml or index.html
-
-Between head tag:
+# Add Imports
+After the package is added, you need to add the following in your _Imports.razor
 ```
-<link rel="stylesheet" href="_content/BlazorVideoPlayer/Plyr.css">
+@using BlazorVideoPlayer
 ```
 
-Befor closed body tag:
+# Register Services
+Add the following in Program.cs
 ```
-<script src="_content/BlazorVideoPlayer/plyr.js"></script>
+builder.Services.AddVideoPlayerServices();
 ```
 
-then use:
+# How To Use
+Be sure to use a unique ID
 ```
-<VideoPlayer.VideoPlayer id="elementId" settings="captions,quality,speed,loop" controls="play-large,restart,rewind,play,fast-forward,progress,current-time,duration,mute,volume,captions,settings,pip,airplay,download,fullscreen" DownloadLink="" Sources="" Poster=""/>
+<div style="width:700px;">
+    <Player id="advanced"
+            CurrentTimeControl="true"
+            DownloadControl="true"
+            DurationControl="true"
+            FastForwardControl="true"
+            FullscreenControl="true"
+            PIPControl="true"
+            VolumeControl="true"
+            MuteControl="true"
+            SettingsControl="true"
+            RewindControl="true"
+            RestartControl="true"
+            ProgressControl="true"
+            PlayControl="true"
+            CaptionsControl="true"
+            AirplayControl="true"
+            PlayLargeControl="true"
+            Captions="true"
+            Loop="true"
+            Quality="true"
+            Speed="true"
+            Poster="poster.png"
+            Sources="@sources"
+            OnEndedVideo="OnEndedVideo"
+            OnPlayVideo="OnPlayVideo"
+            OnVideoTimeUpdate="@((e) => OnVideoTimeUpdate(e.currentTime,e.duration))" />
+</div>
+@code{
+private List<Source> sources = new()
+    {
+        new()
+        {
+            Src = "/path/to/video.mp4",
+            Type = "video/mp4"
+        }
+    };
+    private void OnEndedVideo()
+    {
+        Console.WriteLine("End of play");
+    }
+    private void OnPlayVideo()
+    {
+        Console.WriteLine("Start playing");
+    }
+    private void OnVideoTimeUpdate(float currentTime, float duration)
+    {
+        Console.WriteLine("Current Time: " + currentTime);
+        Console.WriteLine("Duration: " + duration);
+    }
+}
 ```
-in your Components.(Defining an id attribute is mandatory)
-### html attributes
-Included: crossorigin,playsinline and all video tag attributes
-
-### settings
-Included: captions,quality,speed,loop
-
-### controls
-Included: play-large,restart,rewind,play,fast-forward,progress,current-time,duration,mute,volume,captions,settings,pip,airplay,download,fullscreen
-
-### DownloadLink
-your video download link
-
-### Sources
-Dictionary<string, string> of your qualities video links
-
-### Poster
-your video preview thumbnail
-
-Items are being added, please help us
