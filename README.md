@@ -58,7 +58,7 @@ Be sure to use a unique ID
             OnVideoTimeUpdate="@((e) => OnVideoTimeUpdate(e.currentTime,e.duration))" />
 </div>
 @code{
-private List<Source> sources = new()
+    private List<Source> sources = new()
     {
         new()
         {
