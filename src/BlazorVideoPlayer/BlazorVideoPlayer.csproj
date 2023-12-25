@@ -18,11 +18,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Logo-128.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="wwwroot\Logo-128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -34,6 +34,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Logo-128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
