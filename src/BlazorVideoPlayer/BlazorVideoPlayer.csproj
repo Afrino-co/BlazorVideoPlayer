@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>3.0.0</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Authors>Afrino</Authors>
+    <Copyright>© Afrino. All rights reserved.</Copyright>
+    <Title>Blazor Video Player</Title>
+    <PackageTags>BlazorWebAssembly Blazor BlazorVideoPlayer plyr.io net5.0</PackageTags>
+    <PackageId>BlazorVideoPlayer</PackageId>
+    <Description>A suitable video player for Blazor WebAssembly. plyr.io</Description>
+    <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</PackageProjectUrl>
+    <PackageIcon>Logo-128.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Logo-128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.4" />
+  </ItemGroup>
+
+</Project>

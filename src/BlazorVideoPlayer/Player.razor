@@ -1,0 +1,33 @@
+﻿<HeadContent>
+    <link rel="stylesheet" href="/_content/BlazorVideoPlayer/plyr.css" />
+</HeadContent>
+@if (Sources != null)
+{
+    <video controls poster="@Poster" @attributes="InputAttributes">
+
+        @foreach (var source in Sources)
+        {
+            <source src="@source.Src" type="@source.Type" />
+        }
+
+        @if (Tracks != null)
+        {
+            foreach (var track in Tracks)
+            {
+                if (track.IsDefault)
+                {
+                    <track kind="@track.Kind" label="@track.Label" src="@track.Src" srclang="@track.SrcLang" default />
+                }
+                else
+                {
+                    <track kind="@track.Kind" label="@track.Label" src="@track.Src" srclang="@track.SrcLang" />
+                }
+            }
+        }
+
+    </video>
+}
+else
+{
+    <span>No source found</span>
+}
