@@ -11,8 +11,8 @@
     <PackageTags>BlazorWebAssembly Blazor BlazorVideoPlayer plyr.io net7.0</PackageTags>
     <PackageId>BlazorVideoPlayer</PackageId>
     <Description>A suitable video player for Blazor WebAssembly. plyr.io</Description>
-    <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Afrino-co/BlazorVideoPlayer</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Afrino-co/BlazorVideoPlayer</PackageProjectUrl>
     <PackageIcon>Logo-128.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
