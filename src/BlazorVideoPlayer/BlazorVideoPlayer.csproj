@@ -8,15 +8,20 @@
     <Authors>Afrino</Authors>
     <Copyright>© Afrino. All rights reserved.</Copyright>
     <Title>Blazor Video Player</Title>
-    <PackageTags>BlazorWebAssembly Blazor BlazorVideoPlayer plyr.io net5.0</PackageTags>
+    <PackageTags>BlazorWebAssembly Blazor BlazorVideoPlayer plyr.io net7.0</PackageTags>
     <PackageId>BlazorVideoPlayer</PackageId>
     <Description>A suitable video player for Blazor WebAssembly. plyr.io</Description>
     <RepositoryUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</RepositoryUrl>
     <PackageProjectUrl>https://github.com/MeysamMoghaddam/BlazorVideoPlayer</PackageProjectUrl>
     <PackageIcon>Logo-128.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="wwwroot\Logo-128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
